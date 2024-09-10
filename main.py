@@ -1,7 +1,7 @@
 import blockchain
 import plotting
 
-voteBox = blockchain.Blockchain(difficulty=5)
+voteBox = blockchain.Blockchain(difficulty=4)
 voter = 0
 candidates = {}
 #candidates = {'A':0,'N':0,'R':0,'S':0}

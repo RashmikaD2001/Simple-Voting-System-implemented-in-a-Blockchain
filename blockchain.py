@@ -11,10 +11,6 @@ def hashgenerator(data, difficulty):
 
     return [nonceval, result]  # Return both nonce and hash
 
-def hashfunc(data):
-    return hashlib.sha256(data.encode()).hexdigest() #Return hash value to varify the hash value of block
-
-
 class Block:
     def __init__(self, vote, index, hashval, timestamp, previous_hash, nonce):
         self.vote = vote
@@ -48,7 +44,7 @@ class Blockchain:
 
             val = self.chain[i].vote + self.chain[i].previous_hash + str(self.chain[i].timestamp) + str(self.chain[i].nonce)
 
-            if self.chain[i].hashval != hashfunc(val):
+            if self.chain[i].hashval != hashgenerator(val, self.difficulty)[1]:
                 print(str(i) + " is not a valid block")
                 break
 
