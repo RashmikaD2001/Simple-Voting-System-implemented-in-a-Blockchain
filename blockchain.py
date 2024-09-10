@@ -44,6 +44,8 @@ class Blockchain:
 
             val = self.chain[i].vote + self.chain[i].previous_hash + str(self.chain[i].timestamp) + str(self.chain[i].nonce)
 
+            print(f"vote:{self.chain[i].vote} ,hash:{self.chain[i].hashval} ,previous_hash:{self.chain[i].previous_hash} ,timestamp:{self.chain[i].timestamp} ,index:{self.chain[i].index}")
+
             if self.chain[i].hashval != hashgenerator(val, self.difficulty)[1]:
                 print(str(i) + " is not a valid block")
                 break

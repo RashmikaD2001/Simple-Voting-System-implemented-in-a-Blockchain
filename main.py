@@ -43,7 +43,7 @@ if run>0 and len(candidates)>0:
         print(f'Index: {block.index}, Vote: {block.vote}, Hash: {block.hashval}, Nonce: {block.nonce}, Previous Hash: {block.previous_hash}, Timestamp: {block.timestamp}')
     '''
 
-    print("\n\n\n")
+    print("\n")
     voteBox.validateBlockchain()
 
 
