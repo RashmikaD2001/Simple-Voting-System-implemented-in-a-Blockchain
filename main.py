@@ -17,9 +17,11 @@ for i in range(candidateNo):
 
 run = int(input("number of voters: "))
 
+votersStr = ','.join(list(candidates.keys()))
+
 if run>0 and len(candidates)>0:
     while voter < run:
-        userVote = input(f"Vote for a candidate ({','.join(list(candidates.keys()))}): ").upper()
+        userVote = input(f"Vote for a candidate ({votersStr}): ").upper()
 
         if userVote in candidates.keys():
             voteBox.addblock(userVote)
