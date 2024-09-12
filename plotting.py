@@ -9,3 +9,6 @@ def plotWinners(candidatesName, candidatesVotes):
     plt.ylabel("No. of Votes")
     plt.title("Number of votes by each candidates")
     plt.show()
+
+if __name__ == '__main__':
+    print("this is the implementation of plotting the votes")
